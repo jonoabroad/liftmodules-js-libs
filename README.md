@@ -1,6 +1,21 @@
-# MODULE_NAME Lift Module
+# Javascript Libraries Lift Module
 
-WHAT IT DOES
+Collection of javascript libraries. Includes development and minified versions. 
+Uses the minified version in Production run mode.
+
+
+Current libraries:
+
+	modernizr	version 2.5.3
+
+	jquery		version 1.7.2
+
+
+Usuage: 
+
+<script class="lift:JsLibs.jquery"></script>
+
+
 
 ## Using this module
 
@@ -16,11 +31,11 @@ WHAT IT DOES
 
 2. Include this dependency:
 
-         "net.liftmodules" %% "MODULE_NAME" % (liftVersion+"VERSION")
+         "net.liftmodules" %% "js-libs" % (liftVersion+"0.4")
 
 3. In your application's Boot.boot code:
 
-          bootstrap.liftmodules.MODULE_NAME.init
+          bootstrap.liftmodules.JsLibs.init
 
-4. OTHER_STUFF
+
 

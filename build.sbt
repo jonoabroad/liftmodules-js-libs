@@ -1,6 +1,6 @@
-name := "javascript-libraries"
+name := "js-libs"
 
-version := "2.4-0.3"
+version := "2.4-0.4"
 
 organization := "net.liftmodules"
  
