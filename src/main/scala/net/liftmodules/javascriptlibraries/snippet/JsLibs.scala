@@ -18,21 +18,26 @@ package net.liftmodules.javascriptlibraries
 package snippet
 
 import scala.xml._
-
 import net.liftweb.util.Props._
+import net.liftweb.http.S
+import net.liftweb.http.LiftRules
 
 /**
  */
 object JsLibs {
+  
+  private def path(l:String) =  "%s/%s/js/%s".format(S.contextPath, LiftRules.resourceServerPath,l) 
 
-  def modernizr = mode match {
-    case RunModes.Production ⇒ <script src="/js/modernizr-2.0.6.js" type="text/javascript"></script>
-    case _                   ⇒ <script src="/js/modernizr-development-2.0.6.js" type="text/javascript"></script>
+  
+    def modernizr = mode match {
+    case RunModes.Production ⇒ <script src={path("modernizr.custom.05246.js")} type="text/javascript"></script>
+    case _                   ⇒ <script src={path("modernizr-2.5.3.js")} type="text/javascript"></script>
   }
 
   def jquery = mode match {
-    case RunModes.Production ⇒ <script src="/js/jquery-1.7.2.min.js" type="text/javascript"></script>
-    case _                   ⇒ <script src="/js/jquery-1.7.2.js" type="text/javascript"></script>
+    case RunModes.Production ⇒ <script src={path("jquery-1.7.2.min.js")} type="text/javascript"></script>
+    case _                   ⇒ <script src={path("jquery-1.7.2.js")} type="text/javascript"></script>
   }
+
 
 }
