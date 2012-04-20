@@ -16,11 +16,15 @@
 package bootstrap.liftmodules
 
 import net.liftweb.http.LiftRules
+import net.liftweb.http.ResourceServer
 
 object JsLibs {
 	
 	def init : Unit = {
 		LiftRules.addToPackages("net.liftmodules.javascriptlibraries")
+		
+		ResourceServer.allow({ case "js" :: _ :: Nil ⇒ true })
+		
 	}
 	
 }
